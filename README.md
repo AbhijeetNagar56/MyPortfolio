@@ -5,7 +5,21 @@ here I have created my personal portfolio that contains all the details about me
 😃 This website is Designed with MERN stack and deployment is in progress....
 
 
-
+## 🗂️ Project Structure
+myPortfolio/
+│
+├── public/ # Static assets
+│ ├── images/backgroundImg
+│ ├── scripts/script.js
+│ └── stylesheets/stylesheet.css
+│
+├── views/ # HTML Views
+│ └── home.html
+│
+├── index.js # Main server file
+├── package.json
+├── package-lock.json
+├── README.md
 
 # Languages used :
 Html, Css, Javascript and Node.js
