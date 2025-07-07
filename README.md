@@ -25,6 +25,8 @@ myPortfolio/<br>
 │ └── userRoutes.js<br>
 │<br>
 ├── views/ # HTML Views<br>
+│ ├── about.html<br>
+│ ├── project.html<br>
 │ └── home.html<br>
 │<br>
 ├── index.js # Main server file<br>
