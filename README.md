@@ -19,6 +19,10 @@ myPortfolio/<br>
 │ ├── images/backgroundImg<br>
 │ ├── scripts/script.js<br>
 │ └── stylesheets/stylesheet.css<br>
+|<br>
+├── routes/ # Static assets<br>
+│ ├── internalRoutes.js<br>
+│ └── userRoutes.js<br>
 │<br>
 ├── views/ # HTML Views<br>
 │ └── home.html<br>
@@ -34,7 +38,10 @@ myPortfolio/<br>
 2. **Arrange in Struture given**
 3. **Change the Details** up to you.
 4. **Install Node.js** initialize everything.
-
+```
+npm init
+npm install express --save
+```
 
 
 ## 📄 License
