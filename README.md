@@ -48,7 +48,7 @@ npm install express
 ```
 4. **Host locally**
 ```
-node server.js
+node index.js
 ```
 
 
