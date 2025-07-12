@@ -36,13 +36,19 @@ myPortfolio/<br>
 
 ## 🔧 Setup Instructions
 
-1. **Copy the Code** from repository.
-2. **Arrange in Struture given**
-3. **Change the Details** up to you.
-4. **Install Node.js** initialize everything.
+1. **Clone** the repository.
+```
+git clone < copied link from code >
+```
+2. **Change the Details** up to you.
+3. **Install Node.js** initialize everything.
 ```
 npm init
-npm install express --save
+npm install express 
+```
+4. **Host locally**
+```
+node server.js
 ```
 
 
