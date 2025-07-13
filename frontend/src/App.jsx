@@ -13,7 +13,7 @@ import Home from "./pages/home"
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-[url("background.png")]'>
       <Header />
       <Routes>
         <Route path='/' element = {<Home />} />
