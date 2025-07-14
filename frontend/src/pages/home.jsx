@@ -1,51 +1,45 @@
-
-
+const texts = ["Developer","Coder", "Designer", "Freelancer"];
+let index = 0;
+setInterval(() => {
+  index = (index + 1) % texts.length;
+  document.getElementById("changingText").textContent = texts[index];
+}, 4000);
 
 
 const Home = () => {
   return (
-    <div className="text-[#dfdfdf] text-[20px] font-sans">
+    <div className="text-[20px] font-sans">
       <main className="flex flex-col items-center">
-        <section
-          id="intro"
-          className="h-[750px] bg-[rgba(138,138,138,0.3)] px-[50px] rounded-[15px] w-[80%] flex flex-col items-center justify-center"
+        <div
+          className="hero w-[90%] h-[500px]"
         >
-          <img
-            src="myimg.png"
-            alt="Profile"
-            className="w-[250px] rounded-full mb-[50px] mx-auto"
-          />
-          <h2
-            id="typing"
-            className="text-4xl text-white font-mono flex items-end"
-          >
-            Hy, I'm a{' '}
-            <span className="relative inline-block overflow-hidden ml-5 leading-none h-[1em] text-red-500">
-              <span className="block animate-typing">
-                Developer<br />Coder<br />Freelancer<br />Designer<br />Developer
-              </span>
-            </span>
-          </h2>
-          <p className="w-[70%] text-center pt-[50px] text-[30px]">
-            Computer Science undergrad and passionate MERN stack developer.
-            Currently exploring innovative tech ideas and actively seeking
-            collaborators and exciting projects.
-          </p>
-          
-        </section>
+          <div className="hero-overlay"></div>
+          <div className="hero-content text-neutral-content text-center">
+            <div className="max-w-md">
+              <img
+                src="myimg.png"
+                alt="Profile"
+                className="w-[200px] rounded-full mb-[50px] mx-auto"
+              />
+              <h1 className="mb-10 text-5xl w-2xl justify-self-center font-bold">Hy, I'm a <h2 id="changingText" className="text-red-500 font-bold animateword">Developer</h2></h1>
+
+              <button className="btn btn-primary">View More</button>
+            </div>
+          </div>
+        </div>
 
         <section
           id="skills"
-          className="my-[200px] w-[80%] bg-[#6b6b6b] p-[50px_0] rounded-[10px] text-center"
+          className="my-[150px] w-[80%] bg-[#8a8a8a] p-[50px_0] rounded-[10px] text-center"
         >
-          <h2 className="text-2xl mb-6">Skills</h2>
-          <div className="flex flex-wrap justify-center gap-[60px]">
+          <h2 className="text-2xl mb-6 font-bold">Skills</h2>
+          <div className="flex flex-wrap justify-around gap-[60px]">
             {[
-              ['HTML', 'https://webdevmonk.com/main/html.png'],
-              ['CSS', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN-R7LjZirQO8gxcqLt6KV-LOhKBVHGH4X5Q&s'],
-              ['JavaScript', 'https://ellipsiseducation.com/wp-content/uploads/2023/02/javascript-736400_1280.png'],
-              ['Node Js', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtb_9zVzsPWq_LDNDBVCsBYFo996KtVyCxWg&s'],
-              ['Python', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdRsbNblY-trvVBgVFHyP_g2Lrz9dLP3k7Q&s']
+              ['HTML', 'html.png'],
+              ['CSS', 'css.png'],
+              ['JavaScript', 'js.png'],
+              ['Node Js', 'node.png'],
+              ['React', 'react.png']
             ].map(([label, url], index) => (
               <div key={index} className="text-center">
                 <img
