@@ -1,0 +1,22 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "GitHub : @AbhijeetNagar56 <br>\r here I have created my personal portfolio that contains all the details about me regarding the projects, contribution and so on.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix frontend npm run build --prefix frontend",
+    "start": "npm run dev --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhijeetNagar56/MyPortfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AbhijeetNagar56/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/AbhijeetNagar56/MyPortfolio#readme"
+}
