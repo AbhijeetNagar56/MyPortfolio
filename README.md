@@ -2,7 +2,8 @@
 GitHub : @AbhijeetNagar56 <br>
 here I have created my personal portfolio that contains all the details about me regarding the projects, contribution and so on.
 
-😃 This website is Designed with MERN stack and deployment is in progress....
+😃 This website is Designed with MERN stack and hosted on netlify 
+Visit : https://abhijeetnagar56.netlify.app
 
 
 ## 🚀 Features
