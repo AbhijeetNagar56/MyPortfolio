@@ -1,51 +1,45 @@
 
+import medi from '../assets/medi.png'
 
 const Project = () => {
   return (
-    <div className="text-[20px] font-sans my-5">
-      <main className="flex flex-col items-center">
-        <div className="hero bg-base-200 my-10 w-[80%] border-4 p-4">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="text-[18px] sm:text-[20px] font-sans my-5 px-4">
+      <main className="flex flex-col items-center gap-10">
+        {/* RoboBuddy */}
+        <div className="hero bg-base-200 w-full sm:w-[80%] max-w-5xl border-2 sm:border-4 p-4 sm:p-6 rounded-lg shadow-md">
+          <div className="hero-content flex-col lg:flex-row-reverse gap-6">
             <img
-              src="cbot.png"
-              className="max-w-sm rounded-lg shadow-2xl"
+              src={medi}
+              className="w-full sm:max-w-sm h-auto rounded-lg shadow-2xl"
+              alt="RoboBuddy Project"
             />
             <div>
-              <h1 className="text-5xl font-bold">RoboBuddy</h1>
-              <p className="py-6">
-                ChatBot-UI which is a sleek and intuitive user interface designed for interacting with a personal companion chatbot. Built with a user-friendly layout and responsive design, the interface allows users to seamlessly communicate with RoboBuddy.
+              <h1 className="text-3xl sm:text-5xl font-bold">MediRaksha</h1>
+              <p className="py-4 sm:py-6 leading-relaxed">
+                A healthcare application to delivery fast and reliable services to patients and doctors as well..
               </p>
-              <button className="btn btn-primary"><a href="https://github.com/AbhijeetNagar56/Chatbot">GitHub</a></button>
+              <button className="btn btn-primary">
+                <a href="https://mediraksha.netlify.app">Link</a>
+              </button>
             </div>
           </div>
         </div>
-        <div className="hero bg-base-200 my-10 w-[80%] border-4 p-4">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+        {/* RoboBuddy */}
+        <div className="hero bg-base-200 w-full sm:w-[80%] max-w-5xl border-2 sm:border-4 p-4 sm:p-6 rounded-lg shadow-md">
+          <div className="hero-content flex-col lg:flex-row-reverse gap-6">
             <img
-              src="chatapp.png"
-              className="max-w-sm rounded-lg shadow-2xl"
+              src='https://i.pinimg.com/474x/56/e1/66/56e1666259b6090e3e1f8df87e03259c.jpg'
+              className="w-full sm:max-w-sm h-auto rounded-lg shadow-2xl"
+              alt="RoboBuddy Project"
             />
             <div>
-              <h1 className="text-5xl font-bold">Chat-if-y</h1>
-              <p className="py-6">
-                Chat-if-y is a real-time chat application built with the MERN stack. It features user authentication, responsive UI, and seamless socket-based messaging. Users can sign up, log in, and chat instantly in a secure environment.
+              <h1 className="text-3xl sm:text-5xl font-bold">AyurSutra</h1>
+              <p className="py-4 sm:py-6 leading-relaxed">
+                Ayurveda process scheduling app. Practitioner availability and other services..
               </p>
-              <button className="btn btn-primary"><a href="https://github.com/AbhijeetNagar56/Chat-if-y">GitHub</a></button>
-            </div>
-          </div>
-        </div>
-        <div className="hero bg-base-200 my-10 w-[80%] border-4 p-4">
-          <div className="hero-content flex-col lg:flex-row-reverse">
-            <img
-              src="course.png"
-              className="max-w-sm rounded-lg shadow-2xl"
-            />
-            <div>
-              <h1 className="text-5xl font-bold">CourseHUB</h1>
-              <p className="py-6">
-                CourseHUB is a centralized platform for browsing and managing online courses. Designed with a clean user interface, it allows users to explore a curated list of courses with details like title, description, and creator, providing a simple and effective learning dashboard.
-              </p>
-              <button className="btn btn-primary"><a href="https://github.com/AbhijeetNagar56/CourseHUB">GitHub</a></button>
+              <button className="btn btn-primary">
+                <a href="https://ayursutrahealthcare.netlify.app">Link</a>
+              </button>
             </div>
           </div>
         </div>

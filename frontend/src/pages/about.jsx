@@ -1,23 +1,29 @@
 const About = () => {
   return (
-    <div className="text-[20px] font-sans">
-      <main className="mx-auto flex flex-col gap-20 my-12">
+    <div className="text-[18px] sm:text-[20px] font-sans px-4">
+      <main className="mx-auto flex flex-col gap-16 sm:gap-20 my-8 sm:my-12 max-w-5xl">
         <section>
-          <div className="justify-self-center w-[80%] mb-20 border-4 p-5">
-            <h1 className="text-3xl font-bold">About</h1>
-            <p>Hi, I'm Abhijeet Nagar, a passionate B.Tech CSE student with interest in full-stack web development and AI/ML. Build interactive web apps using the MERN stack and exploring intelligent systems that blend hardware with smart UI. I'm always eager to learn, collaborate, and take on challenging projects that push my skills forward.</p>
+          <div className="mx-auto w-full sm:w-[80%] mb-10 sm:mb-20 border-2 sm:border-4 p-4 sm:p-5 rounded-lg shadow-sm">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-4">About</h1>
+            <p className="leading-relaxed">
+              Hi, I'm Abhijeet Nagar, a passionate B.Tech CSE student with interest in full-stack web
+              development and AI/ML. Build interactive web apps using the MERN stack and exploring
+              intelligent systems that blend hardware with smart UI. I'm always eager to learn,
+              collaborate, and take on challenging projects that push my skills forward.
+            </p>
           </div>
-          <div className="w-[80%] justify-self-center my-20">
-            <h2 className="text-2xl my-6 font-bold ">Education Timeline</h2>
-            <ul className="timeline justify-self-center">
+
+          <div className="w-full sm:w-[80%] mx-auto my-10 sm:my-20">
+            <h2 className="text-xl sm:text-2xl my-4 sm:my-6 font-bold">Education Timeline</h2>
+            <ul className="timeline timeline-vertical">
               <li>
-                <div className="timeline-start timeline-box">10th SJVN</div>
+                <div className="timeline-start timeline-box text-sm sm:text-base">10th SJVN</div>
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="text-primary h-5 w-5"
+                    className="text-primary h-4 w-4 sm:h-5 sm:w-5"
                   >
                     <path
                       fillRule="evenodd"
@@ -28,6 +34,7 @@ const About = () => {
                 </div>
                 <hr className="bg-primary" />
               </li>
+
               <li>
                 <hr className="bg-primary" />
                 <div className="timeline-middle">
@@ -35,7 +42,7 @@ const About = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="text-primary h-5 w-5"
+                    className="text-primary h-4 w-4 sm:h-5 sm:w-5"
                   >
                     <path
                       fillRule="evenodd"
@@ -44,18 +51,19 @@ const About = () => {
                     />
                   </svg>
                 </div>
-                <div className="timeline-end timeline-box">12th SJVN</div>
+                <div className="timeline-end timeline-box text-sm sm:text-base">12th SJVN</div>
                 <hr className="bg-primary" />
               </li>
+
               <li>
                 <hr className="bg-primary" />
-                <div className="timeline-start timeline-box">B.tech IIITDwd 2028'</div>
+                <div className="timeline-start timeline-box text-sm sm:text-base">B.Tech IIITDwd 2028'</div>
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="text-primary h-5 w-5"
+                    className="text-primary h-4 w-4 sm:h-5 sm:w-5"
                   >
                     <path
                       fillRule="evenodd"
@@ -66,6 +74,7 @@ const About = () => {
                 </div>
                 <hr />
               </li>
+
               <li>
                 <hr />
                 <div className="timeline-middle">
@@ -73,7 +82,7 @@ const About = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="h-5 w-5"
+                    className="h-4 w-4 sm:h-5 sm:w-5"
                   >
                     <path
                       fillRule="evenodd"
@@ -82,18 +91,19 @@ const About = () => {
                     />
                   </svg>
                 </div>
-                <div className="timeline-end timeline-box">...</div>
+                <div className="timeline-end timeline-box text-sm sm:text-base">...</div>
                 <hr />
               </li>
+
               <li>
                 <hr />
-                <div className="timeline-start timeline-box">...</div>
+                <div className="timeline-start timeline-box text-sm sm:text-base">...</div>
                 <div className="timeline-middle">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="h-5 w-5"
+                    className="h-4 w-4 sm:h-5 sm:w-5"
                   >
                     <path
                       fillRule="evenodd"
@@ -108,13 +118,11 @@ const About = () => {
         </section>
 
         <section className="justify-items-center">
-          <h2 className="text-2xl mb-2">Other Certifications</h2>
-          <div className="justify-self-center">
-            <div className="card bg-base-100 w-96 shadow-sm my-10">
+          <h2 className="text-xl sm:text-2xl mb-2">Other Certifications</h2>
+          <div className="grid gap-6 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
               <figure>
-                <img
-                  src="greeting_card.png"
-                  alt="cert" />
+                <img src="greeting_card.png" alt="cert" className="w-full h-auto object-contain" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">Coding competition</h2>
@@ -124,48 +132,38 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="card bg-base-100 w-96 shadow-sm my-10">
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
               <figure>
-                <img
-                  src="HACKER.png"
-                  alt="cert" />
+                <img src="HACKER.png" alt="cert" className="w-full h-auto object-contain" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">Python Basic</h2>
                 <p>By Hackerrank</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary"><a href="https://www.hackerrank.com/certificates/7c1cdacf2f43">View</a></button>
+                  <button className="btn btn-primary">
+                    <a href="https://www.hackerrank.com/certificates/7c1cdacf2f43">View</a>
+                  </button>
                 </div>
               </div>
             </div>
-            <div className="card bg-base-100 w-96 shadow-sm my-10">
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
               <figure>
-                <img
-                  src="leetcode.png"
-                  alt="cert" />
+                <img src="leetcode.png" alt="cert" className="w-full h-auto object-contain" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">50 Days Badge</h2>
                 <p>By Leetcode</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary"><a href="https://leetcode.com/u/gzfBDDBp1L/">View</a></button>
+                  <button className="btn btn-primary">
+                    <a href="https://leetcode.com/u/gzfBDDBp1L/">View</a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-        <div className="text-center">
-          <h2 className="text-2xl mb-2 font-bold">My Resume link</h2>
-          <a
-            href="https://docs.google.com/document/d/1HfqB9JBrBu79G7lIasKcpSMi9OHQ9kh52MLfu64wRKo/edit?pli=1&tab=t.0#heading=h.9aedq4tvs2mc"
-            className="text-2xl text-blue-400 underline hover:text-blue-200"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open
-          </a>
-        </div>
       </main>
     </div>
   )

@@ -1,22 +1,43 @@
 @import "tailwindcss";
 @source "./public/*.{html,js}";
+
 @plugin "daisyui" {
-    themes: dark --default, nord --prefersdark, forest;
+    themes: dark --default, dark --prefersdark, forest;
 }
 
-.animateword {
-    animation: typing 4s infinite steps(25, end), blink 0.8s infinite;
-    overflow: hidden;
-    width: 0;
-    display: inline-flex;
-    border-right: 5px solid rgb(58, 209, 255);
+/* * Custom keyframes for the moving gradient effect 
+ * This creates a loop that shifts the gradient position 
+ */
+@keyframes background-pan {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-@keyframes blink {
-    50% {border-right: transparent}
-}
-@keyframes typing {
-    60% {width: 250px}
+/* Apply the animated background to the entire page */
+body {
+    /* * Use a vibrant, attractive RGB gradient. 
+     * Adjust colors as needed (e.g., from blue/purple to red/orange)
+     */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+    /* Determine the size of the gradient. Making it larger than the viewport 
+       allows the background-position to shift smoothly */
+    background-size: 400% 400%;
+
+    /* Apply the animation */
+    animation: background-pan 20s ease infinite;
+
+    /* Ensure the body covers the entire viewport */
+    min-height: 100vh;
 }
 
 .card {
