@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 const Header = () => {
     return (
         // The outer header container should also be transparent
-        <header className="flex justify-between items-center flex-wrap p-4 sticky top-0 z-50 bg-transparent">
+        <header className="flex justify-between items-center flex-wrap backdrop-blur-xl sticky top-0 z-50 bg-transparent">
             {/* 1. Changed bg-base-100 to bg-transparent */}
             <div className="navbar bg-transparent shadow-md text-white">
                 <div className="navbar-start">
@@ -28,7 +28,7 @@ const Header = () => {
                         </ul>
                     </div>
                     {/* Site Title/Logo */}
-                    <a className="btn btn-ghost text-xl font-bold tracking-wider text-white hover:bg-transparent">
+                    <a className="btn btn-ghost text-xl font-bold tracking-wider text-white hover:bg-transparent font-mono">
                         Abhijeet Nagar
                     </a>
                 </div>

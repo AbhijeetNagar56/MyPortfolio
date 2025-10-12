@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 
 const texts = ["Explorer", "Coder", "Designer", "Student"];
 
@@ -67,9 +68,11 @@ const Home = () => {
               <p className="mb-8 text-sm sm:text-lg">
                 I build responsive and modern web applications.
               </p>
-              <button onClick={()=> window.location.href = '/about'} className="btn bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 shadow-md">
+              <Link to="/about">
+              <button className="btn bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 shadow-md">
                 View More
               </button>
+              </Link>
             </div>
           </div>
         </section>
