@@ -162,6 +162,21 @@ const About = () => {
                 </div>
               </div>
             </div>
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
+              <figure>
+                <img src="leet100.png" alt="cert" className="w-full h-auto object-contain" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">100 Days Badge</h2>
+                <p>By Leetcode</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">
+                    <a href="https://leetcode.com/u/gzfBDDBp1L/">View</a>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
