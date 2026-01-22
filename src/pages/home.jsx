@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router';
+import { useState, useEffect } from 'react';
+
 
 const texts = ["Explorer", "Coder", "Designer", "Student"];
 
@@ -48,7 +48,7 @@ const Home = () => {
 
         {/* Hero Section */}
         <section
-          className="hero w-full max-w-4xl h-[400px] sm:h-[500px] bg-gray-700 rounded-lg shadow-xl"
+          className="hero w-full max-w-4xl h-100 sm:h-125 bg-gray-700 rounded-lg shadow-xl"
         >
           <div className="hero-content text-white text-center p-4">
             <div className="max-w-md mx-auto">
@@ -68,16 +68,11 @@ const Home = () => {
               <p className="mb-8 text-sm sm:text-lg">
                 I build responsive and modern web applications.
               </p>
-              <Link to="/about">
-              <button className="btn bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300 shadow-md">
-                View More
-              </button>
-              </Link>
             </div>
           </div>
         </section>
 
-        ---
+        
 
         {/* Skills Section */}
         <section
