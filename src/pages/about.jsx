@@ -118,39 +118,13 @@ const About = () => {
         </section>
 
         <section className="justify-items-center">
-          <h2 className="text-xl sm:text-2xl mb-2">Other Certifications</h2>
+          <h2 className="text-xl sm:text-2xl mb-2">Achievements</h2>
           <div className="grid gap-6 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
-            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
-              <figure>
-                <img src="greeting_card.png" alt="cert" className="w-full h-auto object-contain" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Coding competition</h2>
-                <p>By NST</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">View</button>
-                </div>
-              </div>
-            </div>
+            
 
             <div className="card bg-base-100 w-full max-w-xs shadow-sm">
               <figure>
-                <img src="HACKER.png" alt="cert" className="w-full h-auto object-contain" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Python Basic</h2>
-                <p>By Hackerrank</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">
-                    <a href="https://www.hackerrank.com/certificates/7c1cdacf2f43">View</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
-              <figure>
-                <img src="leetcode.png" alt="cert" className="w-full h-auto object-contain" />
+                <img src="leet50.png" alt="cert" className="w-full h-auto object-contain" />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">50 Days Badge</h2>
@@ -177,6 +151,63 @@ const About = () => {
                 </div>
               </div>
             </div>
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
+              <figure>
+                <img src="leetdec.png" alt="cert" className="w-full h-auto object-contain" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">50 Days Badge</h2>
+                <p>By Leetcode</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">
+                    <a href="https://leetcode.com/u/gzfBDDBp1L/">View</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
+              <figure>
+                <img src="forage.png" alt="cert" className="w-full h-75 object-contain" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Data Analytics job simulation</h2>
+                <p>By Forage</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
+              <figure>
+                <img src="HACKER.png" alt="cert" className="w-full h-75 object-contain" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Python Basic</h2>
+                <p>By Hackerrank</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">
+                    <a href="https://www.hackerrank.com/certificates/7c1cdacf2f43">View</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="card bg-base-100 w-full max-w-xs shadow-sm">
+              <figure>
+                <img src="greeting_card.png" alt="cert" className="w-full h-75 object-contain" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">Coding competition</h2>
+                <p>By NST</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">View</button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>

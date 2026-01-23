@@ -3,7 +3,7 @@ GitHub : @AbhijeetNagar56 <br>
 here I have created my personal portfolio that contains all the details about me regarding the projects, contribution and so on.
 
 😃 This website is Designed with MERN stack and hosted on netlify 
-Visit : https://abhijeetnagar56.netlify.app
+Visit : https://abhijeetnagar.netlify.app
 
 
 ## 🚀 Features
@@ -20,7 +20,7 @@ Already provided
 
 1. **Clone the repo** from Link.
 ```
-git clone <pasteLink>
+git clone <paste-link>
 ```
 3. **Change the Details** up to you.
 4. **Install Node.js** initialize everything.
@@ -35,14 +35,12 @@ npm start
 This project is open-source and free to use.
 
 
-
 # Languages used :
 Html, Css, Javascript and Node.js
 
 # 🔋 Frameworks used :
-express, react.
+Nodejs, react, daisyui, tailwindcss, bootstrap, lucide-react.
 
 
 
-# acknowledge
-Thanks for showing interest updated version will be coming soon...
+**By Abhijeet Nagar**

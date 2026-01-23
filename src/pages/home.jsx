@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
+import techy from '../assets/techy.png'
 
-
-const texts = ["Explorer", "Coder", "Designer", "Student"];
+const texts = ["Developer", "Coder", "Designer", "Freelancer"];
 
 const Home = () => {
   const [currentText, setCurrentText] = useState("");
@@ -48,18 +48,18 @@ const Home = () => {
 
         {/* Hero Section */}
         <section
-          className="hero w-full max-w-4xl h-100 sm:h-125 bg-gray-700 rounded-lg shadow-xl"
+          className="hero w-full max-w-5xl h-100 sm:h-125 bg-gray-700 rounded-lg shadow-xl"
         >
           <div className="hero-content text-white text-center p-4">
             <div className="max-w-md mx-auto">
               <img
-                src="myimg.png"
+                src={techy}
                 alt="Profile"
                 className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mb-6 mx-auto object-cover border-4 border-red-500 shadow-lg"
               />
               <h1 className="mb-6 text-3xl sm:text-5xl font-extrabold leading-tight">
                 Hy, I'm a{' '}
-                <span className="text-red-400 font-bold min-w-[200px] inline-block">
+                <span className="text-red-400 font-bold min-w-100 inline-block">
                   {currentText}
                   {/* Optional: Add a blinking cursor effect */}
                   <span className="cursor after:content-['|'] after:animate-blink ml-1"></span>
@@ -77,7 +77,7 @@ const Home = () => {
         {/* Skills Section */}
         <section
           id="skills"
-          className="my-16 sm:my-24 w-full max-w-4xl bg-gray-700 p-8 sm:p-12 rounded-xl shadow-2xl text-center"
+          className="my-16 sm:my-24 w-full max-w-5xl bg-gray-700 p-8 sm:p-12 rounded-xl shadow-2xl text-center"
         >
           <h2 className="text-3xl sm:text-4xl mb-10 font-bold border-b-2 inline-block pb-1">
             Skills

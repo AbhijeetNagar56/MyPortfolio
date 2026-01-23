@@ -1,4 +1,4 @@
-import tech from '../assets/techy.png'
+import logo from '/logo.png'
 import { Link } from 'react-router'
 
 
@@ -20,7 +20,7 @@ const Header = () => {
                         {/* Mobile Dropdown Menu: Needs a specific background for contrast */}
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-gray-900 rounded-box z-[10] mt-3 w-52 p-2 shadow-xl border border-red-500/50"
+                            className="menu menu-sm dropdown-content bg-gray-900 rounded-box z-10 mt-3 w-52 p-2 shadow-xl border border-red-500/50"
                         >
                             <li><Link className="hover:text-red-400 text-base" to='/'>Home</Link></li>
                             <li><Link className="hover:text-red-400 text-base" to='/project'>Projects</Link></li>
@@ -46,7 +46,7 @@ const Header = () => {
                 <div className="navbar-end">
                     {/* Logo/Avatar - Using the placeholder URL */}
                     <img
-                        src={tech}
+                        src={logo}
                         className='w-12 h-12 rounded-full border-2 border-white object-cover shadow-lg'
                         alt="tech logo placeholder"
                     />
