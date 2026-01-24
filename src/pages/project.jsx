@@ -16,6 +16,9 @@ const Project = () => {
               <button className="btn btn-primary">
                 <a target='_blank' href="https://github.com/AbhijeetNagar56/Mediraksha.git">Github</a>
               </button>
+              <button className="btn btn-secondary">
+                <a target='_blank' href="https://mediraksha.onrender.com/">App</a>
+              </button>
             </div>
           </div>
         </div>
