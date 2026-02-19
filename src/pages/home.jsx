@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import techy from '../assets/techy.png'
 
-const texts = ["Developer", "Coder", "Designer", "Freelancer"];
+const texts = ["Developer", "Designer", "Freelancer"];
 
 const Home = () => {
   const [currentText, setCurrentText] = useState("");

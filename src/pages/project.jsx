@@ -1,5 +1,4 @@
 
-import medi from '../assets/medi.png'
 
 const Project = () => {
   return (
@@ -16,8 +15,8 @@ const Project = () => {
               <button className="btn btn-primary">
                 <a target='_blank' href="https://github.com/AbhijeetNagar56/Mediraksha.git">Github</a>
               </button>
-              <button className="btn btn-secondary">
-                <a target='_blank' href="https://mediraksha.onrender.com/">App</a>
+              <button className="btn btn-secondary mx-5">
+                <a target='_blank' href="https://medi-raksha-2-0.vercel.app/">App</a>
               </button>
             </div>
           </div>
@@ -34,8 +33,11 @@ const Project = () => {
               <button className="btn btn-primary">
                 <a target='_blank' href="https://github.com/AbhijeetNagar56/Chat-if-y.git">Github</a>
               </button>
+              <button className="btn btn-secondary mx-5">
+                <a target='' href="">App</a>
+              </button>
             </div>
-          </div>
+          </div>  
         </div>
         
         {/* Chatif */}
@@ -48,6 +50,9 @@ const Project = () => {
               </p>
               <button className="btn btn-primary">
                 <a target='_blank' href="https://github.com/AbhijeetNagar56/Chat-if-y.git">Github</a>
+              </button>
+              <button className="btn btn-secondary mx-5">
+                <a target='' href="">App</a>
               </button>
             </div>
           </div>

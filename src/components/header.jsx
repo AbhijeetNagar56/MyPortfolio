@@ -24,6 +24,7 @@ const Header = () => {
                         >
                             <li><Link className="hover:text-red-400 text-base" to='/'>Home</Link></li>
                             <li><Link className="hover:text-red-400 text-base" to='/project'>Projects</Link></li>
+                            <li><Link className="hover:text-red-400 text-base" to='/product'>Products</Link></li>
                             <li><Link className="hover:text-red-400 text-base" to='/about'>About</Link></li>
                         </ul>
                     </div>
@@ -39,6 +40,7 @@ const Header = () => {
                         {/* Ensure links are easily visible by setting text color and hover effect */}
                         <li><Link className="text-white text-lg font-medium hover:text-red-400 transition duration-200" to='/'>Home</Link></li>
                         <li><Link className="text-white text-lg font-medium hover:text-red-400 transition duration-200" to='/project'>Projects</Link></li>
+                        <li><Link className="text-white text-lg font-medium hover:text-red-400 transition duration-200" to='/product'>Products</Link></li>
                         <li><Link className="text-white text-lg font-medium hover:text-red-400 transition duration-200" to='/about'>About</Link></li>
                     </ul>
                 </div>
