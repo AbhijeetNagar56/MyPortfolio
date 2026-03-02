@@ -56,8 +56,8 @@ const Home = () => {
               />
               <div className="px-4 sm:px-0">
                 <h1 className="mb-6 text-3xl sm:text-5xl font-extrabold leading-tight">
-                  Hy, I'm a{' '}
-                  <span className="text-red-400 font-bold inline-block max-w-full break-words">
+                  Hy, I'm a{' '}<br></br>
+                  <span className="text-red-400 font-bold inline-block max-w-full wrap-break-word">
                     {currentText}
                     <span className="cursor after:content-['|'] after:animate-blink ml-1"></span>
                   </span>
