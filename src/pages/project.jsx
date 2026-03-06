@@ -13,7 +13,7 @@ const projects = [
     description:
       "Healthcare platform enabling seamless interaction between patients and doctors with fast, reliable service delivery.",
     tech: ["React", "Node.js", "MongoDB", "JWT"],
-    github: "https://github.com/AbhijeetNagar56/Mediraksha.git",
+    github: "https://github.com/mediraksha10-maker/mediraksha.1.0",
     live: "https://mediraksha-web-1.onrender.com/",
     status: "Live",
   },
