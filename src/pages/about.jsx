@@ -12,10 +12,10 @@ const About = () => {
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Passionate developer crafting digital experiences
             </p>
-            <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-pink-500 mx-auto mt-6 rounded-full"></div>
+            <div className="w-16 h-1 bg-linear-to-r from-red-500 to-pink-500 mx-auto mt-6 rounded-full"></div>
           </div>
 
-          <div className="about-card bg-gradient-to-br from-base-100 to-base-200 border border-base-300 p-8 sm:p-10 rounded-2xl shadow-xl hover:shadow-2xl hover:border-red-500/50 transition-all">
+          <div className="about-card bg-linear-to-br from-base-100 to-base-200 border border-base-300 p-8 sm:p-10 rounded-2xl shadow-xl hover:shadow-2xl hover:border-red-500/50 transition-all">
             <p className="text-gray-300 leading-relaxed text-lg">
               Hi, I'm <span className="font-bold text-red-400">Abhijeet Nagar</span>, a passionate <span className="font-bold">B.Tech CSE student</span> with a strong interest in <span className="font-bold">full-stack web development</span> and <span className="font-bold">AI/ML</span>. 
               <br /><br />
@@ -39,7 +39,7 @@ const About = () => {
             <div className="fact-card bg-base-100/50 backdrop-blur border border-base-300 p-6 rounded-xl hover:border-red-500/50 transition-all">
               <p className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-2">Currently</p>
               <p className="text-white font-bold">B.Tech CSE Student</p>
-              <p className="text-gray-400 text-sm mt-2">IIIT Delhi | Class of 2028</p>
+              <p className="text-gray-400 text-sm mt-2">IIIT Dharwad | Class of 2028</p>
             </div>
             <div className="fact-card bg-base-100/50 backdrop-blur border border-base-300 p-6 rounded-xl hover:border-red-500/50 transition-all">
               <p className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-2">Interests</p>
@@ -88,7 +88,7 @@ const About = () => {
               <hr className="bg-red-400/50" />
               <div className="timeline-start timeline-box bg-base-100 border border-base-300 shadow-lg hover:shadow-xl hover:border-red-500/50 transition-all">
                 <h3 className="font-bold text-red-400">B.Tech in CSE</h3>
-                <p className="text-sm text-gray-400">IIIT Delhi | 2028</p>
+                <p className="text-sm text-gray-400">IIIT Dharwad | 2028</p>
               </div>
               <div className="timeline-middle">
                 <div className="w-4 h-4 bg-red-400 rounded-full ring-2 ring-base-300 ring-offset-4 ring-offset-base-100"></div>
@@ -157,7 +157,7 @@ const About = () => {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="achievement-card group bg-gradient-to-br from-base-100 to-base-200 border border-base-300 p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-red-500/50 transition-all cursor-pointer"
+                className="achievement-card group bg-linear-to-br from-base-100 to-base-200 border border-base-300 p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-red-500/50 transition-all cursor-pointer"
               >
                 <div className="text-4xl mb-3">{cert.icon}</div>
                 <h3 className="font-bold text-white group-hover:text-red-400 transition-colors">
@@ -213,7 +213,7 @@ const About = () => {
             I'm always open to discussing new projects, collaborations, and opportunities. Feel free to reach out!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:abhijeetnagar56@gmail.com" className="btn btn-primary gap-2">
+            <a href="mailto:abhijeetnagar0@gmail.com" className="btn btn-primary gap-2">
               Send Me an Email
             </a>
             <a href="/project" className="btn btn-outline btn-primary">

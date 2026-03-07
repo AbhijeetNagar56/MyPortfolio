@@ -53,7 +53,7 @@ const Project = () => {
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-6">
             Showcase of my recent work across different technologies and domains
           </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="w-16 h-1 bg-linear-to-r from-red-500 to-pink-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Project Stats */}
@@ -81,7 +81,7 @@ const Project = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card group relative bg-gradient-to-br from-base-100 to-base-200 border border-base-300 rounded-2xl shadow-xl hover:shadow-2xl hover:border-red-500/50 transition-all duration-300 overflow-hidden"
+              className="project-card group relative bg-linear-to-br from-base-100 to-base-200 border border-base-300 rounded-2xl shadow-xl hover:shadow-2xl hover:border-red-500/50 transition-all duration-300 overflow-hidden"
             >
               {/* Project Icon Badge */}
               <div className="absolute top-4 right-4 text-4xl opacity-20 group-hover:opacity-40 transition-opacity">
@@ -157,7 +157,7 @@ const Project = () => {
               </div>
 
               {/* Gradient Overlay on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
             </div>
           ))}
         </div>

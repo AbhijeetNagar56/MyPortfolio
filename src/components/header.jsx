@@ -71,7 +71,7 @@ const Header = () => {
                             <Instagram size={20} />
                         </a>
                         <a
-                            href="mailto:abhijeetnagar56@gmail.com"
+                            href="mailto:abhijeetnagar0@gmail.com"
                             className="btn btn-ghost btn-circle btn-sm text-white hover:text-red-400 hover:bg-gray-800 transition-all"
                             title="Email"
                         >

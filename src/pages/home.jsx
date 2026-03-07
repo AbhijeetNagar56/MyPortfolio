@@ -46,13 +46,13 @@ const Home = () => {
 
         {/* Hero Section */}
         <section className="hero-wrapper w-full max-w-5xl mb-12">
-          <div className="hero-gradient bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-700/50">
+          <div className="hero-gradient bg-linear-to-br from-gray-800 via-gray-700 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-700/50">
             <div className="hero-content text-white text-center p-8 sm:p-12 md:p-16">
               <div className="max-w-2xl mx-auto">
                 {/* Profile Image */}
                 <div className="profile-image-container mb-8">
                   <div className="relative inline-block">
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-red-500 to-pink-500 rounded-full blur-lg opacity-75 animate-pulse"></div>
                     <img
                       src={techy}
                       alt="Profile"
@@ -68,7 +68,7 @@ const Home = () => {
                   </p>
                   <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
                     I'm a{' '}<br className="hidden sm:block" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500 animate-pulse">
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-pink-500 animate-pulse">
                       {currentText}
                       <span className="cursor-blink ml-1">|</span>
                     </span>
@@ -104,7 +104,7 @@ const Home = () => {
           </div>
           <div className="stat-card bg-base-100 p-4 sm:p-6 rounded-xl shadow-lg border border-base-300 text-center hover:shadow-xl transition-all">
             <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">2+</div>
-            <p className="text-xs sm:text-sm text-gray-400">Years Experience</p>
+            <p className="text-xs sm:text-sm text-gray-400">Hackathons</p>
           </div>
         </section>
 
@@ -115,7 +115,7 @@ const Home = () => {
             <p className="text-gray-400 max-w-2xl mx-auto">
               I specialize in modern web technologies and frameworks to create exceptional digital experiences
             </p>
-            <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-pink-500 mx-auto mt-6 rounded-full"></div>
+            <div className="w-16 h-1 bg-linear-to-r from-red-500 to-pink-500 mx-auto mt-6 rounded-full"></div>
           </div>
 
           {/* Skills Grid */}
@@ -132,7 +132,7 @@ const Home = () => {
                 className="skill-card group text-center w-24 sm:w-28 md:w-32 p-4 rounded-xl bg-base-100 border border-base-300 shadow-lg hover:shadow-2xl hover:border-red-500/50 transition-all duration-300 cursor-pointer"
               >
                 <div className="skill-image-wrapper relative mb-4">
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-red-500/10 to-pink-500/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
                   <img
                     src={url}
                     alt={label}
@@ -150,7 +150,7 @@ const Home = () => {
         <section className="why-section my-16 sm:my-24 w-full max-w-5xl">
           <div className="section-header text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Why Choose Me?</h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-pink-500 mx-auto rounded-full"></div>
+            <div className="w-16 h-1 bg-linear-to-r from-red-500 to-pink-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="why-grid grid md:grid-cols-3 gap-6">
