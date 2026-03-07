@@ -24,12 +24,10 @@
 
 /* Apply the animated background to the entire page */
 body {
-    /* * Use a vibrant, attractive RGB gradient. 
-     * Adjust colors as needed (e.g., from blue/purple to red/orange)
-     */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    /* Dark animated gradient background */
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
 
-    /* Determine the size of the gradient. Making it larger than the viewport 
+    /* Determine the size of the gradient. Making it larger than the viewport
        allows the background-position to shift smoothly */
     background-size: 400% 400%;
 

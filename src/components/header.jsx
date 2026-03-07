@@ -1,4 +1,3 @@
-import logo from '/logo.png'
 import { Link } from 'react-router'
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react'
 
@@ -79,13 +78,6 @@ const Header = () => {
                             <Mail size={20} />
                         </a>
                     </div>
-                    
-                    {/* Logo/Avatar */}
-                    <img
-                        src={logo}
-                        className='w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white/20 hover:border-red-400 object-cover shadow-lg transition-all'
-                        alt="Profile Logo"
-                    />
                 </div>
             </div>
         </header>
