@@ -24,18 +24,28 @@
 
 /* Apply the animated background to the entire page */
 body {
-    /* Dark animated gradient background */
-    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+    /* Dark animated gradient background with more visible color transitions */
+    background: linear-gradient(
+        -45deg,
+        #0f0f1e,
+        #1a1a3a,
+        #2d1b4e,
+        #1a2a4a,
+        #0f0f1e
+    );
 
     /* Determine the size of the gradient. Making it larger than the viewport
        allows the background-position to shift smoothly */
-    background-size: 400% 400%;
+    background-size: 600% 600%;
 
-    /* Apply the animation */
-    animation: background-pan 20s ease infinite;
+    /* Apply the animation - faster for more visible movement */
+    animation: background-pan 15s ease-in-out infinite;
 
     /* Ensure the body covers the entire viewport */
     min-height: 100vh;
+
+    /* Add a subtle radial gradient overlay for depth */
+    background-attachment: fixed;
 }
 
 /* Cursor Blink Animation */
