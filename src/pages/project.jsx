@@ -9,7 +9,47 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/Travel-Decision-Engine",
     live: "https://travel-decision-engine.onrender.com/",
     status: "Live",
-    icon: "🌍",
+    icon: "",
+  },
+  {
+    title: "Pdf-merge",
+    description:
+      "A pdf-merging web application.",
+    tech: ["Node.js", "Express", "multer"],
+    github: "https://github.com/AbhijeetNagar56/merge-pdf",
+    live: "https://merge-pdf-34qj.onrender.com/",
+    status: "Live",
+    icon: "",
+  },
+  {
+    title: "Wumpus 2D game",
+    description:
+      "A 2D game where the agent will find gold from the cave where wumpus is also there.",
+    tech: ["html","css", "javascript"],
+    github: "https://github.com/AbhijeetNagar56/wumpus-game",
+    live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/wumpus-game/blob/main/index.html",
+    status: "Live",
+    icon: "",
+  },
+  {
+    title: "Password-generator",
+    description:
+      "Random password generator.",
+    tech: ["html","css", "javascript"],
+    github: "https://github.com/AbhijeetNagar56/mini-projects",
+    live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/mini-projects/blob/main/passwordGenerator.html",
+    status: "Live",
+    icon: "",
+  },
+  {
+    title: "Todo",
+    description:
+      "To do list app.",
+    tech: ["html","css", "javascript"],
+    github: "https://github.com/AbhijeetNagar56/mini-projects",
+    live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/mini-projects/blob/main/todo.html",
+    status: "Live",
+    icon: "",
   },
   {
     title: "MediRaksha",
@@ -19,7 +59,7 @@ const projects = [
     github: "https://github.com/mediraksha10-maker/mediraksha.1.0",
     live: "https://mediraksha-web-1.onrender.com/",
     status: "Live",
-    icon: "🏥",
+    icon: "",
   },
   {
     title: "Chat-if-y",
@@ -29,7 +69,7 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/Chat-if-y.git",
     live: "",
     status: "In Progress",
-    icon: "💬",
+    icon: "",
   },
   {
     title: "QuizOps",
@@ -39,7 +79,7 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/Chat-if-y.git",
     live: "",
     status: "In Progress",
-    icon: "📝",
+    icon: "",
   },
 ];
 
@@ -59,11 +99,11 @@ const Project = () => {
         {/* Project Stats */}
         <div className="stats-container grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           <div className="stat-box bg-base-100/50 backdrop-blur border border-base-300 rounded-xl p-4 text-center hover:border-red-500/50 transition-all">
-            <div className="text-2xl font-bold text-red-400">4</div>
+            <div className="text-2xl font-bold text-red-400">{projects.length}</div>
             <p className="text-sm text-gray-400 mt-2">Total Projects</p>
           </div>
           <div className="stat-box bg-base-100/50 backdrop-blur border border-base-300 rounded-xl p-4 text-center hover:border-red-500/50 transition-all">
-            <div className="text-2xl font-bold text-green-400">2</div>
+            <div className="text-2xl font-bold text-green-400">6</div>
             <p className="text-sm text-gray-400 mt-2">Live Projects</p>
           </div>
           <div className="stat-box bg-base-100/50 backdrop-blur border border-base-300 rounded-xl p-4 text-center hover:border-red-500/50 transition-all">
