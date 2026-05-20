@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Portfolio</title>
+    <!-- Lucide Icons Link for Clean Graphics -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS Reset & Variables mimicking Tailwind slate/red palette */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent-red: #f87171;
+            --accent-pink: #ec4899;
+            --accent-blue: #38bdf8;
+            --accent-purple: #a78bfa;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(51, 65, 85, 0.5);
+        }
+
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow: hidden;
+        }
+
+        /* Top Sticky Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, var(--accent-red), var(--accent-pink));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Presentation Style Slide Container */
+        .presentation-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding-top: 70px; /* Offset for the Navbar */
+            box-sizing: border-box;
+        }
+
+        /* Section slide setup */
+        .slide {
+            height: calc(100vh - 70px);
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            position: relative;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-content-wrapper {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- HOME SLIDE COMPONENTS --- */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b, #0f172a, #1e293b);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-image-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 24px;
+        }
+
+        .profile-image-glow {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--accent-red), var(--accent-pink));
+            border-radius: 50%;
+            filter: blur(12px);
+            opacity: 0.65;
+            animation: pulse 2s infinite;
+        }
+
+        .profile-fallback-img {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: #334155;
+            border: 4px solid var(--accent-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-tagline-mini {
+            color: var(--accent-red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        /* Typing Effect CSS Animation mimicking your React Hook */
+        .typing-text::after {
+            content: "Developer";
+            background: linear-gradient(to right, var(--accent-red), var(--accent-pink));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: typeDeleteList 9s steps(10) infinite;
+        }
+
+        .cursor-blink {
+            animation: blink 0.8s infinite;
+            color: var(--accent-pink);
+            font-weight: 300;
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--accent-red), var(--accent-pink));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-red);
+        }
+
+        /* --- PROJECTS SLIDE COMPONENTS --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-bar {
+            width: 64px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-red), var(--accent-pink));
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Pill System */
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pill {
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pill-red { background-color: rgba(248, 113, 113, 0.1); color: var(--accent-red); }
+        .pill-purple { background-color: rgba(167, 139, 250, 0.1); color: var(--accent-purple); }
+        .pill-blue { background-color: rgba(56, 189, 248, 0.1); color: var(--accent-blue); }
+
+        /* --- ABOUT & SKILLS SLIDE COMPONENTS --- */
+        .about-split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .skills-display-zone h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .skills-flex-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .skill-node-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .why-choose-us-stack {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+        }
+
+        .why-mini-row {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: border-color 0.3s;
+        }
+
+        .why-mini-row:hover {
+            border-color: rgba(248, 113, 113, 0.4);
+        }
+
+        .why-icon-box {
+            color: var(--accent-red);
+            padding-top: 2px;
+        }
+
+        .why-text-box h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .why-text-box p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Fixed Presentation Dot Navigation Layout Overlay */
+        .side-bullets {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .bullet-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .bullet-dot:hover {
+            transform: scale(1.3);
+            background-color: var(--accent-red);
+        }
+
+        /* Animations Rulesets */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.03); }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Pure CSS keyframes cycling content simulating React hooks text switching sequentially */
+        @keyframes typeDeleteList {
+            0%, 25% { content: "Developer"; }
+33%, 58% { content: "Designer"; }
+66%, 92% { content: "Freelancer"; }
+        }
+
+        /* Responsive UI Scaling rules for portable monitors or small windows */
+        @media(max-height: 750px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-desc { margin-bottom: 15px; font-size: 0.95rem; }
+            .hero-gradient { padding: 25px; }
+            .project-card { padding: 20px; }
+            .about-split-grid { gap: 20px; }
+        }
+
+        @media(max-width: 850px) {
+            .project-grid { grid-template-columns: 1fr; gap: 16px; }
+            .about-split-grid { grid-template-columns: 1fr; gap: 24px; }
+            body, html { overflow-y: auto; }
+            .presentation-container { height: auto; overflow-y: visible; scroll-snap-type: none; }
+            .slide { height: auto; min-height: 100vh; padding: 40px 20px; }
+            .navbar { padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar Module Header -->
+    <nav class="navbar">
+        <div class="nav-logo">PORTFOLIO.</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Visual Presentation Slide Track Controls -->
+    <div class="side-bullets">
+        <a href="#home" class="bullet-dot" title="Home"></a>
+        <a href="#projects" class="bullet-dot" title="Projects"></a>
+        <a href="#about" class="bullet-dot" title="About"></a>
+    </div>
+
+    <!-- Presentation Canvas Content -->
+    <div class="presentation-container">
+        
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="slide">
+            <div class="slide-content-wrapper">
+                <div class="hero-gradient">
+                    
+                    <!-- Avatar Area Frame Profile Wrapper -->
+                    <div class="profile-image-container">
+                        <div class="profile-image-glow"></div>
+                        <div class="profile-fallback-img">
+                            <!-- SVG Fallback matching Lucide graphic style -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Meta Headers text segments -->
+                    <p class="hero-tagline-mini">Welcome to my portfolio</p>
+                    
+                    <h1 class="hero-title">
+                        I'm a <br class="hidden sm:block"/>
+                        <span class="typing-text"></span><span class="cursor-blink">|</span>
+                    </h1>
+
+                    <p class="hero-desc">
+                        I craft responsive and modern web applications that combine stunning design with powerful functionality. Let's build something amazing together.
+                    </p>
+
+                    <!-- User Engagement Action Targets -->
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+                        </a>
+                        <a href="#about" class="btn btn-outline">
+                            Learn About Me
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROJECTS -->
+        <section id="projects" class="slide">
+            <div class="slide-content-wrapper">
+                
+                <div class="section-header">
+                    <h2>Featured Engineering Deliverables</h2>
+                    <div class="section-bar"></div>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Project Box Node 1 -->
+                    <div class="project-card">
+                        <div class="project-title">Cloud-Native MERN eCommerce System</div>
+                        <p class="project-desc">
+                            Engineered high-performance relational architectures utilizing Node.js backend subsystems with MongoDB aggregations. Encapsulated structural setups within custom multi-environment Docker setups.
+                        </p>
+                        <div class="pill-container">
+                            <span class="pill pill-red">MongoDB</span>
+                            <span class="pill pill-red">Express</span>
+                            <span class="pill pill-red">React Node</span>
+                            <span class="pill pill-red">Docker Engine</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Box Node 2 -->
+                    <div class="project-card">
+                        <div class="project-title">Algorithmic Run-Time CI/CD Orchestration</div>
+                        <p class="project-desc">
+                            Automated functional validation tracking suites calculating big-O complexity patterns metrics automatically upon Git action hooks before continuous delivery execution loops drop to live AWS targets.
+                        </p>
+                        <div class="pill-container">
+                            <span class="pill pill-purple">GitHub Actions</span>
+                            <span class="pill pill-purple">AWS Cluster</span>
+                            <span class="pill pill-purple">Kubernetes</span>
+                            <span class="pill pill-purple">Bash Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: ABOUT & SKILLS MATRIX -->
+        <section id="about" class="slide">
+            <div class="slide-content-wrapper">
+                
+                <div class="section-header">
+                    <h2>Skills & Professional Background</h2>
+                    <div class="section-bar"></div>
+                </div>
+
+                <div class="about-split-grid">
+                    
+                    <!-- Left Section: Structured Skills Area -->
+                    <div class="skills-display-zone">
+                        <h3>Technical Core Matrix</h3>
+                        
+                        <div class="skills-flex-wrap">
+                            <div class="skill-node-box"><span style="color:var(--accent-red)">■</span> MERN Fullstack</div>
+                            <div class="skill-node-box"><span style="color:var(--accent-blue)">■</span> Data Structures & Algorithms</div>
+                            <div class="skill-node-box"><span style="color:var(--accent-purple)">■</span> DevOps Automation Pipelines</div>
+                            <div class="skill-node-box"><span style="color:var(--accent-red)">■</span> REST API Engineering</div>
+                            <div class="skill-node-box"><span style="color:var(--accent-blue)">■</span> C++ / Java Problem Solving</div>
+                            <div class="skill-node-box"><span style="color:var(--accent-purple)">■</span> Infrastructure As Code</div>
+                        </div>
+                    </div>
+
+                    <!-- Right Section: Why Choose Me matching Lucide List items structure -->
+                    <div class="why-choose-us-stack">
+                        
+                        <!-- Row Segment 1 -->
+                        <div class="why-mini-row">
+                            <div class="why-icon-box"><i data-lucide="code2"></i></div>
+                            <div class="why-text-box">
+                                <h4>Clean Production Code</h4>
+                                <p>I write maintainable, efficient code following best practices, design patterns, and optimization rules.</p>
+                            </div>
+                        </div>
+
+                        <!-- Row Segment 2 -->
+                        <div class="why-mini-row">
+                            <div class="why-icon-box"><i data-lucide="palette"></i></div>
+                            <div class="why-text-box">
+                                <h4>Modern Architecture Design</h4>
+                                <p>Beautiful interfaces and modular structures configured to perform elegantly under real system stress conditions.</p>
+                            </div>
+                        </div>
+
+                        <!-- Row Segment 3 -->
+                        <div class="why-mini-row">
+                            <div class="why-icon-box"><i data-lucide="briefcase"></i></div>
+                            <div class="why-text-box">
+                                <h4>Professional Execution</h4>
+                                <p>Dedicated to delivering highly deterministic system behaviors while meeting project milestones on time.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Initialize Lucide Dynamic Script Elements Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
