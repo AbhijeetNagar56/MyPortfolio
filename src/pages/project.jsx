@@ -2,6 +2,16 @@ import { ExternalLink, Github, Code2, Zap } from 'lucide-react';
 
 const projects = [
   {
+    title: "University Accomodation system",
+    description:
+      "A university accommodation management system that allows students to apply for hostel rooms, view their application status, and manage their profiles. Admins can review applications and assign rooms.",
+    tech: ["Node.js", "Express", "React", "MySql"],
+    github: "https://github.com/AbhijeetNagar56/University-Database-Management-System",
+    live: "https://university-database.onrender.com",
+    status: "Live",
+    icon: "",
+  },
+  {
     title: "Travel Decision Engine",
     description:
       "A multi-factor decision intelligence system that ranks countries using environmental indicators, healthcare infrastructure, advisories, and personalized risk tolerance scoring.",
@@ -24,7 +34,7 @@ const projects = [
   {
     title: "Wumpus 2D game",
     description:
-      "A 2D game where the agent will find gold from the cave where wumpus is also there.",
+      "A 2D game where the agent will find gold from the cave with wumpus.",
     tech: ["html","css", "javascript"],
     github: "https://github.com/AbhijeetNagar56/wumpus-game",
     live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/wumpus-game/blob/main/index.html",
@@ -50,42 +60,12 @@ const projects = [
     live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/mini-projects/blob/main/todo.html",
     status: "Live",
     icon: "",
-  },
-  {
-    title: "MediRaksha",
-    description:
-      "Healthcare platform enabling seamless interaction between patients and doctors with fast, reliable service delivery.",
-    tech: ["React", "Node.js", "MongoDB", "JWT"],
-    github: "https://github.com/mediraksha10-maker/mediraksha.1.0",
-    live: "https://mediraksha-web-1.onrender.com/",
-    status: "Live",
-    icon: "",
-  },
-  {
-    title: "Chat-if-y",
-    description:
-      "Real-time chat application built using Socket.io with live messaging architecture. Currently under active development.",
-    tech: ["React", "Socket.io", "Node.js"],
-    github: "https://github.com/AbhijeetNagar56/Chat-if-y.git",
-    live: "",
-    status: "In Progress",
-    icon: "",
-  },
-  {
-    title: "QuizOps",
-    description:
-      "Online quiz platform with AI-powered proctoring and tab-switch detection to ensure fairness and integrity in evaluation.",
-    tech: ["React", "AI Integration", "Node.js"],
-    github: "https://github.com/AbhijeetNagar56/Chat-if-y.git",
-    live: "",
-    status: "In Progress",
-    icon: "",
-  },
+  }
 ];
 
 const Project = () => {
   return (
-    <div className="min-h-screen py-16 px-4">
+    <div className="min-h-screen py-16 px-4" id='project'>
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="section-header text-center mb-16">
@@ -103,11 +83,11 @@ const Project = () => {
             <p className="text-sm text-gray-400 mt-2">Total Projects</p>
           </div>
           <div className="stat-box bg-base-100/50 backdrop-blur border border-base-300 rounded-xl p-4 text-center hover:border-red-500/50 transition-all">
-            <div className="text-2xl font-bold text-green-400">6</div>
+            <div className="text-2xl font-bold text-green-400">{projects.length}</div>
             <p className="text-sm text-gray-400 mt-2">Live Projects</p>
           </div>
           <div className="stat-box bg-base-100/50 backdrop-blur border border-base-300 rounded-xl p-4 text-center hover:border-red-500/50 transition-all">
-            <div className="text-2xl font-bold text-yellow-400">2</div>
+            <div className="text-2xl font-bold text-yellow-400">0</div>
             <p className="text-sm text-gray-400 mt-2">In Progress</p>
           </div>
           <div className="stat-box bg-base-100/50 backdrop-blur border border-base-300 rounded-xl p-4 text-center hover:border-red-500/50 transition-all">

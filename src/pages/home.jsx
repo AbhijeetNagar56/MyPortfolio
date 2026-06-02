@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import techy from '../assets/techy.png';
 import { ArrowRight, Code2, Palette, Briefcase } from 'lucide-react';
 
-const texts = ["Developer", "Designer", "Freelancer"];
+const texts = ["Developer", "Student"];
 
 const Home = () => {
   const [currentText, setCurrentText] = useState("");
@@ -41,7 +41,7 @@ const Home = () => {
   }, [currentText, isDeleting, wordIndex, typingSpeed]);
 
   return (
-    <div className="text-lg md:text-xl font-sans min-h-screen">
+    <div className="text-lg md:text-xl font-sans min-h-screen" id='home'>
       <main className="flex flex-col items-center p-4">
 
         {/* Hero Section */}
@@ -80,10 +80,10 @@ const Home = () => {
 
                 {/* CTA Buttons */}
                 <div className="cta-buttons flex flex-col sm:flex-row gap-4 justify-center mt-10">
-                  <a href="/project" className="btn btn-primary gap-2 flex-1 sm:flex-none hover:gap-3 transition-all">
+                  <a href="#project" className="btn btn-primary gap-2 flex-1 sm:flex-none hover:gap-3 transition-all">
                     View My Work <ArrowRight size={20} />
                   </a>
-                  <a href="/about" className="btn btn-outline btn-primary flex-1 sm:flex-none">
+                  <a href="#about" className="btn btn-outline btn-primary flex-1 sm:flex-none">
                     Learn About Me
                   </a>
                 </div>
@@ -95,15 +95,15 @@ const Home = () => {
         {/* Quick Stats */}
         <section className="quick-stats w-full max-w-5xl mb-16 grid grid-cols-3 gap-4 sm:gap-6">
           <div className="stat-card bg-base-100 p-4 sm:p-6 rounded-xl shadow-lg border border-base-300 text-center hover:shadow-xl transition-all">
-            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">10+</div>
+            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">5+</div>
             <p className="text-xs sm:text-sm text-gray-400">Projects Completed</p>
           </div>
           <div className="stat-card bg-base-100 p-4 sm:p-6 rounded-xl shadow-lg border border-base-300 text-center hover:shadow-xl transition-all">
-            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">5+</div>
+            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">3+</div>
             <p className="text-xs sm:text-sm text-gray-400">Tech Skills</p>
           </div>
           <div className="stat-card bg-base-100 p-4 sm:p-6 rounded-xl shadow-lg border border-base-300 text-center hover:shadow-xl transition-all">
-            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">2+</div>
+            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">2x</div>
             <p className="text-xs sm:text-sm text-gray-400">Hackathons</p>
           </div>
         </section>

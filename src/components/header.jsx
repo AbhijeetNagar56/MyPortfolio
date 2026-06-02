@@ -1,9 +1,49 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router'
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react'
 
 const Header = () => {
+    const [isVisible, setIsVisible] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
+
+    useEffect(() => {
+        const handleScrollAndMouse = (e) => {
+            const currentScrollY = window.scrollY
+
+            // 1. Open navbar instantly when cursor hits top boundary (top 20 pixels)
+            if (e.type === 'mousemove' && e.clientY <= 20) {
+                setIsVisible(true)
+                return
+            }
+
+            // 2. Automatically hide/show based on scroll direction
+            if (e.type === 'scroll') {
+                if (currentScrollY < 50) {
+                    setIsVisible(true) // Always show at the very top
+                } else if (currentScrollY > lastScrollY) {
+                    setIsVisible(false) // Scrolling down - hide
+                } else {
+                    setIsVisible(true)  // Scrolling up - show
+                }
+                setLastScrollY(currentScrollY)
+            }
+        }
+
+        window.addEventListener('scroll', handleScrollAndMouse)
+        window.addEventListener('mousemove', handleScrollAndMouse)
+
+        return () => {
+            window.removeEventListener('scroll', handleScrollAndMouse)
+            window.removeEventListener('mousemove', handleScrollAndMouse)
+        }
+    }, [lastScrollY])
+
     return (
-        <header className="header-container flex justify-between items-center backdrop-blur-xl sticky top-0 z-50 bg-gray-900/80 border-b border-gray-700/50">
+        <header 
+            className={`h-12 header-container flex justify-between items-center backdrop-blur-xl fixed top-0 left-0 w-full z-50 bg-gray-900/80 border-b border-gray-700/50 transition-transform duration-300 ease-in-out ${
+                isVisible ? 'translate-y-0' : '-translate-y-full'
+            }`}
+        >
             <div className="navbar bg-transparent shadow-none text-white w-full">
                 <div className="navbar-start">
                     {/* Mobile Dropdown Menu */}
@@ -18,10 +58,9 @@ const Header = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-gray-900 rounded-box z-10 mt-3 w-52 p-2 shadow-xl border border-red-500/50"
                         >
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='/'>Home</Link></li>
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='/project'>Projects</Link></li>
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='/product'>Products</Link></li>
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='/about'>About</Link></li>
+                            <li><Link className="hover:text-red-400 text-base transition-colors" to='#home'>Home</Link></li>
+                            <li><Link className="hover:text-red-400 text-base transition-colors" to='#project'>Projects</Link></li>
+                            <li><Link className="hover:text-red-400 text-base transition-colors" to='#about'>About</Link></li>
                         </ul>
                     </div>
                     {/* Brand/Logo */}
@@ -33,10 +72,9 @@ const Header = () => {
                 {/* Desktop Navigation Links */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-1">
-                        <li><Link className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" to='/'>Home</Link></li>
-                        <li><Link className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" to='/project'>Projects</Link></li>
-                        <li><Link className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" to='/product'>Products</Link></li>
-                        <li><Link className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" to='/about'>About</Link></li>
+                        <li><a className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" href='#home'>Home</a></li>
+                        <li><a className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" href='#project'>Projects</a></li>
+                        <li><a className="text-white font-medium hover:text-red-400 transition-colors duration-200 rounded-lg hover:bg-gray-800/50" href='#about'>About</a></li>
                     </ul>
                 </div>
 
@@ -60,15 +98,6 @@ const Header = () => {
                             title="LinkedIn"
                         >
                             <Linkedin size={20} />
-                        </a>
-                        <a
-                            href="https://instagram.com/abhijeet_nagar56"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-ghost btn-circle btn-sm text-white hover:text-red-400 hover:bg-gray-800 transition-all"
-                            title="Instagram"
-                        >
-                            <Instagram size={20} />
                         </a>
                         <a
                             href="mailto:abhijeetnagar0@gmail.com"
