@@ -5,6 +5,10 @@
     themes: dark --default, dark --prefersdark, forest;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* * Custom keyframes for the moving gradient effect 
  * This creates a loop that shifts the gradient position 
  */
@@ -27,11 +31,11 @@ body {
     /* Dark animated gradient background with more visible color transitions */
     background: linear-gradient(
         -45deg,
-        #0f0f1e,
-        #1a1a3a,
-        #2d1b4e,
-        #1a2a4a,
-        #0f0f1e
+        #06060b,
+        #19192a,
+        #493d60,
+        #1f2635,
+        #040407
     );
 
     /* Determine the size of the gradient. Making it larger than the viewport
@@ -46,6 +50,45 @@ body {
 
     /* Add a subtle radial gradient overlay for depth */
     background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.portfolio-shell {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.portfolio-scroller {
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 3.75rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 3.75rem;
+    box-sizing: border-box;
+}
+
+.portfolio-slide {
+    min-height: calc(100vh - 3.75rem);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: stretch;
+}
+
+.portfolio-slide > * {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .portfolio-scroller {
+        scroll-snap-type: y proximity;
+    }
 }
 
 /* Cursor Blink Animation */

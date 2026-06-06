@@ -5,13 +5,18 @@ import Home from "./pages/home"
 
 const App = () => {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="portfolio-shell">
             <Header />
-            {/* Added pt-20 (padding-top) so content isn't swallowed by the fixed navbar */}
-            <main className="flex-1 pt-20">
-                <Home />
-                <Project />
-                <About />
+            <main className="portfolio-scroller">
+                <section className="portfolio-slide" id="home">
+                    <Home />
+                </section>
+                <section className="portfolio-slide" id="project">
+                    <Project />
+                </section>
+                <section className="portfolio-slide" id="about">
+                    <About />
+                </section>
             </main>
         </div>
     )

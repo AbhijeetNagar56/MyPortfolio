@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router'
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react'
 
 const Header = () => {
@@ -40,7 +39,7 @@ const Header = () => {
 
     return (
         <header 
-            className={`h-12 header-container flex justify-between items-center backdrop-blur-xl fixed top-0 left-0 w-full z-50 bg-gray-900/80 border-b border-gray-700/50 transition-transform duration-300 ease-in-out ${
+            className={`h-15 header-container flex justify-between items-center backdrop-blur-xl fixed top-0 left-0 w-full z-50 bg-gray-900/80 border-b border-gray-700/50 transition-transform duration-300 ease-in-out ${
                 isVisible ? 'translate-y-0' : '-translate-y-full'
             }`}
         >
@@ -58,9 +57,9 @@ const Header = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-gray-900 rounded-box z-10 mt-3 w-52 p-2 shadow-xl border border-red-500/50"
                         >
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='#home'>Home</Link></li>
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='#project'>Projects</Link></li>
-                            <li><Link className="hover:text-red-400 text-base transition-colors" to='#about'>About</Link></li>
+                            <li><a className="hover:text-red-400 text-base transition-colors" href="#home">Home</a></li>
+                            <li><a className="hover:text-red-400 text-base transition-colors" href="#project">Projects</a></li>
+                            <li><a className="hover:text-red-400 text-base transition-colors" href="#about">About</a></li>
                         </ul>
                     </div>
                     {/* Brand/Logo */}

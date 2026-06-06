@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Code2, Zap } from 'lucide-react';
+import { ExternalLink, Github, Code2, Zap, Database, Plane, FileText, Gamepad2} from 'lucide-react';
 
 const projects = [
   {
@@ -9,7 +9,7 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/University-Database-Management-System",
     live: "https://university-database.onrender.com",
     status: "Live",
-    icon: "",
+    icon: <Database />,
   },
   {
     title: "Travel Decision Engine",
@@ -19,7 +19,7 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/Travel-Decision-Engine",
     live: "https://travel-decision-engine.onrender.com/",
     status: "Live",
-    icon: "",
+    icon: <Plane />,
   },
   {
     title: "Pdf-merge",
@@ -29,7 +29,7 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/merge-pdf",
     live: "https://merge-pdf-34qj.onrender.com/",
     status: "Live",
-    icon: "",
+    icon: <FileText />,
   },
   {
     title: "Wumpus 2D game",
@@ -39,41 +39,18 @@ const projects = [
     github: "https://github.com/AbhijeetNagar56/wumpus-game",
     live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/wumpus-game/blob/main/index.html",
     status: "Live",
-    icon: "",
-  },
-  {
-    title: "Password-generator",
-    description:
-      "Random password generator.",
-    tech: ["html","css", "javascript"],
-    github: "https://github.com/AbhijeetNagar56/mini-projects",
-    live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/mini-projects/blob/main/passwordGenerator.html",
-    status: "Live",
-    icon: "",
-  },
-  {
-    title: "Todo",
-    description:
-      "To do list app.",
-    tech: ["html","css", "javascript"],
-    github: "https://github.com/AbhijeetNagar56/mini-projects",
-    live: "https://htmlpreview.github.io/?https://github.com/AbhijeetNagar56/mini-projects/blob/main/todo.html",
-    status: "Live",
-    icon: "",
+    icon: <Gamepad2 />,
   }
 ];
 
 const Project = () => {
   return (
-    <div className="min-h-screen py-16 px-4" id='project'>
+    <div className="min-h-[calc(100vh-3.75rem)] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="section-header text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">My Projects</h1>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-6">
-            Showcase of my recent work across different technologies and domains
-          </p>
-          <div className="w-16 h-1 bg-linear-to-r from-red-500 to-pink-500 mx-auto rounded-full"></div>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Projects</h1>
+          <div className="w-50 h-1 bg-linear-to-r from-red-500 to-pink-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Project Stats */}
