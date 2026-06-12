@@ -136,7 +136,7 @@ const About = () => {
             <Star className="w-8 h-8 text-red-400" />
             Detailed Resume & Future Goals
           </h2>
-          <a target='_blanck' href="https://example.com" className='font-bold'>View Resume</a>
+          <a target='_blanck' href="https://docs.google.com/document/d/1UmVG9LdTpYH080AAH5M7SPT3c_515wFwp7Wu_1bqi58/edit?usp=sharing" className='font-bold'>View Resume</a>
         </section>
 
       </main>

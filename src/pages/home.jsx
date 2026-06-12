@@ -1,5 +1,27 @@
 import { useState, useEffect } from 'react';
 import techy from '../assets/techy.png';
+
+import mongodb from '../assets/mongodb.svg';
+import express from '../assets/express.svg';
+import react from '../assets/react.svg';
+import nodejs from '../assets/nodejs.svg';
+import mysql from '../assets/mysql.svg';
+import postgresql from '../assets/postgresql.svg';
+
+import linux from '../assets/linux.svg';
+import git from '../assets/git.svg';
+import nginx from '../assets/nginx.svg';
+import postman from '../assets/postman.svg';
+import dbeaver from '../assets/dbeaver.svg';
+import typescript from '../assets/typescript.svg';
+
+import cpp from '../assets/cpp.svg';
+import python from '../assets/python.svg';
+import ubuntu from '../assets/ubuntu.svg';
+import docker from '../assets/docker.svg';
+import github from '../assets/github.svg';
+// import typescript from '../assets/typescript.svg';
+
 import { ArrowRight, Code2, Palette, Briefcase, Award, Code, BrainCircuit, LaptopMinimal } from 'lucide-react';
 
 const texts = ["Developer", "Student"];
@@ -103,7 +125,7 @@ const Home = () => {
             <p className="text-xs sm:text-sm text-gray-400">Technical Domain</p>
           </div>
           <div className="stat-card bg-base-100 p-4 sm:p-6 rounded-xl shadow-lg border border-base-300 text-center hover:shadow-xl transition-all">
-            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">2x</div>
+            <div className="text-2xl sm:text-3xl font-bold text-red-400 mb-2">1x</div>
             <p className="text-xs sm:text-sm text-gray-400">Hackathons</p>
           </div>
         </section>
@@ -116,27 +138,25 @@ const Home = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="skills-grid flex flex-wrap justify-center gap-6 sm:gap-8">
+          <div className="skills-grid flex flex-wrap justify-center gap-8 sm:gap-10">
             {[
-              { label: 'MongoDB', url: 'https://imgs.search.brave.com/2GfVX0bzdl-FEk5lEhw-HYvstpBPINpYYVsmK5yCM6Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9tb25nb2RiLWlj/b24tMi5zdmc', category: 'Database' },
-              { label: 'Express', url: 'https://imgs.search.brave.com/7vTIE6IWwWDvYpRw7Fy8yQNB2e7VTrvocSro0RZb8O4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL2V4cHJl/c3MtanMxNzIwODk1/NDkzLmxvZ293aWsu/Y29tLndlYnA', category: 'Backend' },
-              { label: 'React', url: 'https://imgs.search.brave.com/_N0t1v_QP9Pk0Snrr4knbzZYHrOQKJee5bxh1ze2t2s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTUvUmVh/Y3QtTG9nby1QTkct/RmlsZS5wbmc', category: 'Frontend' },
-              { label: 'Node.js', url: 'https://imgs.search.brave.com/8YTKtuH5MSEf709be8D0D62vwCblQuxYvhyYG8LE12I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzI3LzIvbm9kZS1q/cy1sb2dvLXBuZ19z/ZWVrbG9nby0yNzM3/NDkucG5n', category: 'Backend' },
-              { label: 'MySql', url: 'https://imgs.search.brave.com/7HP8ODcA_jyquioPaxHI39dyd2M_X-XtmN7hpQuuKXc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9icmFu/ZGxvZ28ub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzAy/L015U1FMLUxvZ28u/cG5n', category: 'Database' },
-              { label: 'PostgreSql', url: 'https://imgs.search.brave.com/6avd4kULIAWcZ6MLDCaLzz7rVJuZU7vxfxSoKzcHbVQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZGl4LmNvbS9sb2dv/LzIxMDY3MDMucG5n', category: 'Database' },
-              { label: 'Linux', url: 'https://imgs.search.brave.com/EdfrfOwZ0U158hL0T-yVIEOaAWJFLJ3W7esJ5lRrinA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9MaW51eC9M/aW51eC1Mb2dvLndp/bmUuc3Zn', category: 'Os' },
-              { label: 'Git', url: 'https://imgs.search.brave.com/RTQ6UhKU86fV_OJRLPRBxPbYVp3hqCEFvHPnHZuyH54/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy82/MmE2MzYwZjAzYTg3/MGI5MjBjYmZkNDEu/cG5n', category: 'vcs' },
-              { label: 'GitHub', url: 'https://imgs.search.brave.com/KrxOVr9W18qkCnYtmbyv4lNkUJeE-PhbVjroS4ejL1M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWdpdGh1Yi1sb2dv/LWljb24tc3ZnLWRv/d25sb2FkLXBuZy00/MzczODkucG5nP2Y9/d2VicCZ3PTEyOA', category: 'Cloud' },
-              { label: 'Nginx', url: 'https://imgs.search.brave.com/cOM71K3n9_IF3cV6KbJmdkeTZf3PnalEOKHgv5kM9L0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9icmFu/ZGxvZ28ub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzAy/L05HSU5YLUxvZ28u/cG5n', category: 'Proxy' },
-              { label: 'Postman', url: 'https://imgs.search.brave.com/SFdvrubba7ecDcYxwgSCnlCPfMc75dRCxGBd7EAcj44/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuY2RubG9nby5j/b20vbG9nb3MvcC8y/MC9wb3N0bWFuLnN2/Zw', category: 'API' },
-              { label: 'Dbeaver', url: 'https://imgs.search.brave.com/CkBMQhjvz5w3ApZ-qjFGnGZL-PF2GvVSx2QTcZO9pBQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYmVh/dmVyLmNvbS9kb2Nz/L2RiZWF2ZXIvaW1h/Z2VzL2RiZWF2ZXIt/aGVhZC5wbmc', category: 'DB interface' },
-              { label: 'Docker', url: 'https://imgs.search.brave.com/gdiab7015SESTAvveSL-HfopV0OMij4Chr0098Ddu04/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWRvY2tlci1sb2dv/LWljb24tc3ZnLWRv/d25sb2FkLXBuZy0z/MDI5OTU5LnBuZz9m/PXdlYnAmdz0xMjg', category: 'Containerization' },
-              { label: 'DockerHub', url: 'https://imgs.search.brave.com/qzgG1es_9BueAFWksX6QheP4-TEXJn1Zt3EO2IdSIUo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b3BjLXJvdXRlci5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjMvMDcvRG9ja2Vy/XzE1MHgxNTBweC0w/MS0wMS0wMS5wbmc', category: 'Cloud' },
-              { label: 'AWS', url: 'https://imgs.search.brave.com/Xypq6u49ycOtnB1zqwCnPDDucHD-5LmUMguCxXjvUCo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LWF3cy1ncm91cC1h/d3MtY2xvdWQtbG9n/by1pY29uLXN2Zy1k/b3dubG9hZC1wbmct/MTQ2MDM4NTAucG5n/P2Y9d2VicCZ3PTEy/OA', category: 'Cloud' },
-              { label: 'CPP', url: 'https://imgs.search.brave.com/FzHcg4crMfgXNawp9Iyqx1QiaGz6w-PxXVYW8j3ciEQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aWNvbnM4LmNvbS9l/eHRlcm5hbC10YWwt/cmV2aXZvLWNvbG9y/LXRhbC1yZXZpdm8v/MTIwMC9leHRlcm5h/bC1jcGx1c3BsdXMt/YS1nZW5lcmFsLXB1/cnBvc2UtZGVzY3Jp/cHRpdmUtcHJvZ3Jh/bW1pbmctY29tcHV0/ZXItbGFuZ3VhZ2Ut/bG9nby1jb2xvci10/YWwtcmV2aXZvLmpw/Zw', category: 'Programming' },
-              { label: 'Python', url: 'https://imgs.search.brave.com/hTj55yelremOY5RcCmqISjmhMco6k2TlqYFStOcnho0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/Ym5haWwuaW1nYmlu/LmNvbS8yLzEwLzEy/L3B5dGhvbi1sb2dv/LXB5dGhvbi1wcm9n/cmFtbWluZy1sYW5n/dWFnZS1sb2dvLW4z/YzJoUG1WX3QuanBn', category: 'Programming' },
-              { label: 'Javascript', url: 'https://imgs.search.brave.com/G3zavm9oE7fLsUNBkU621G4h35AnxfQUuq7o0qaJCLA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDEyLzY5/Ny8yOTgvbm9uXzJ4/LzNkLWphdmFzY3Jp/cHQtbG9nby1kZXNp/Z24tZnJlZS1wbmcu/cG5n', category: 'Code/web' }
-              
+              { label: 'MongoDB', url: mongodb, category: 'NoSQL Database' },
+              { label: 'Express', url: express, category: 'Backend Framework' },
+              { label: 'React', url: react, category: 'Frontend Library' },
+              { label: 'Node.js', url: nodejs, category: 'JavaScript Runtime' },
+              { label: 'MySQL', url: mysql, category: 'Relational Database' },
+              { label: 'PostgreSQL', url: postgresql, category: 'Relational Database' },
+              { label: 'TypeScript', url: typescript, category: 'Programming Language' },
+              { label: 'Nginx', url: nginx, category: 'Web Server / Reverse Proxy' },
+              { label: 'Postman', url: postman, category: 'API Development & Testing' },
+              { label: 'DBeaver', url: dbeaver, category: 'Database Client' },
+              { label: 'C++', url: cpp, category: 'Programming Language' },
+              { label: 'Python', url: python, category: 'Programming Language' },
+              { label: 'Linux', url: linux, category: 'Operating System' },
+              { label: 'Ubuntu', url: ubuntu, category: 'Linux Distribution' },
+              { label: 'Git', url: git, category: 'Version Control System' },
+              { label: 'GitHub', url: github, category: 'Git Hosting Platform' },
+              { label: 'Docker', url: docker, category: 'Containerization Platform' }
             ].map(({ label, url, category }, itemIndex) => (
               <div
                 key={itemIndex}
@@ -157,7 +177,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Why Choose Me Section */}
+        {/* Languages */}
         <section className="my-16 sm:my-24 w-full max-w-5xl">
           <h2 className="text-2xl mx-auto sm:text-3xl font-bold mb-5 flex items-center gap-3">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Language Proficiency:</h2>
@@ -167,7 +187,7 @@ const Home = () => {
             {[
               {
                 title: "English",
-                issuer: "Professional Working Proficiency",
+                issuer: "Working Proficiency",
                 icon: "🇺🇸",
                 link: "https://leetcode.com/u/gzfBDDBp1L/"
               },
@@ -176,18 +196,11 @@ const Home = () => {
                 issuer: "Native Speaker",
                 icon: "🇮🇳",
                 link: ""
-              },
-              {
-                title: "Japanese",
-                issuer: "Elementary Proficiency",
-                icon: "🇯🇵",
-                link: ""
               }
             ].map((cert, idx) => (
               <a
                 key={idx}
                 href={cert.link}
-                target="_blank"
                 rel="noopener noreferrer"
                 className="w-80 achievement-card group bg-linear-to-br from-base-100 to-base-200 border border-base-300 p-6 rounded-xl shadow-lg hover:shadow-xl hover:border-red-500/50 transition-all cursor-pointer"
               >
